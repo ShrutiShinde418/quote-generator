@@ -32,7 +32,6 @@ function App() {
   useEffect(() => {
     getRandomQuote();
   }, []);
-  console.log("rendered");
   return (
     <Context.Provider
       value={{
@@ -41,7 +40,7 @@ function App() {
       }}
     >
       <div className="xl:container mx-auto min-h-screen flex flex-col font-raleway">
-        <header className="self-end justify-items-end	mt-5">
+        <header className="self-end justify-items-end	sm:mt-5 my-10 mx-8">
           <button
             className="flex items-center text-lg gap-2 text-black1"
             onClick={randomQuoteHandler}

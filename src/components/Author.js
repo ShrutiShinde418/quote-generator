@@ -4,7 +4,6 @@ import "./Author.css";
 
 const Author = (props) => {
   const context = useContext(Context);
-  console.log(context);
   const showMoreQuotesHandler = () => {
     context.showMoreQuotesHandler();
   };
@@ -14,7 +13,9 @@ const Author = (props) => {
       onClick={showMoreQuotesHandler}
     >
       <div className="flex flex-col gap-1 items-start">
-        <h2 className="text-2xl font-bold text-black1">{props.author}</h2>
+        <h2 className="sm:text-2xl text-xl font-bold text-black1">
+          {props.author}
+        </h2>
         <h3 className="text-sm font-medium text-gray1">{props.genre}</h3>
       </div>
       <div>
